@@ -1,33 +1,20 @@
+// import components
+import { Profile } from 'components/Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 // import data
 import user from '../data/user.json';
 import data from '../data/data.json';
 import friends from '../data/friends.json';
 import transactions from '../data/transactions.json';
-// import components
-import { Profile } from './Profile/Profile';
-import { Statistics } from './Statistics/Statistics';
-import { FriendList } from './FriendList/FriendList';
-import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+// import styled
+import { SectionTasks, TasksTitle } from './App.styled';
 
 export const App = () => {
   return (
-    // <div
-    //   style={{
-    //     height: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     fontSize: 40,
-    //     color: '#000000',
-    //   }}
-    // >
-    //   React homework template
-    // </div>
-
-    <div>
-      <p>
-        <b>Task 1:</b>
-      </p>
+    <SectionTasks>
+      <TasksTitle>Task 1:</TasksTitle>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -35,18 +22,12 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <p>
-        <b>Task 2:</b>
-      </p>
+      <TasksTitle>Task 2:</TasksTitle>
       <Statistics title="Upload stats" stats={data} />
-      <p>
-        <b>Task 3:</b>
-      </p>
+      <TasksTitle>Task 3:</TasksTitle>
       <FriendList friends={friends} />
-      <p>
-        <b>Task 4:</b>
-      </p>
+      <TasksTitle>Task 4:</TasksTitle>
       <TransactionHistory items={transactions} />
-    </div>
+    </SectionTasks>
   );
 };
