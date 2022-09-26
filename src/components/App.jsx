@@ -22,8 +22,10 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <TasksTitle>Task 2:</TasksTitle>
+      <TasksTitle>Task 2.1:</TasksTitle>
       <Statistics title="Upload stats" stats={data} />
+      <TasksTitle>Task 2.2:</TasksTitle>
+      <Statistics stats={data} />
       <TasksTitle>Task 3:</TasksTitle>
       <FriendList friends={friends} />
       <TasksTitle>Task 4:</TasksTitle>

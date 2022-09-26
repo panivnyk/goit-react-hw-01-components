@@ -7,4 +7,6 @@ export const SectionTasks = styled.div`
 export const TasksTitle = styled.p`
   font-size: 22px;
   font-weight: bold;
+  margin-top: 30px;
+  text-transform: uppercase;
 `;

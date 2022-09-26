@@ -1,9 +1,11 @@
-export const FriendList = () => {
-  return (
-    <li class="item">
-      <span class="status"></span>
-      <img class="avatar" src="" alt="User avatar" width="48" />
-      <p class="name"></p>
-    </li>
-  );
+import PropTypes from 'prop-types';
+import { FriendListItem } from 'components/FriendListItem/FriendListItem';
+import { List } from './FriendList.styled';
+
+export const FriendList = ({ friends }) => {
+  return <List>{FriendListItem}</List>;
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired,
 };
